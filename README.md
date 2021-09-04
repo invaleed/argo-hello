@@ -1,2 +1,2 @@
-# hellowhale
+# argo-hello
 
