@@ -31,7 +31,7 @@ pipeline {
 
     stage('Deploy to Prod') {
       steps {
-        input message:'Approve deployment?'
+        //input message:'Approve deployment?'
           dir("argo-hello-deploy") {
             sh "cd ./prod && kustomize edit set image invaleed/argo-hello:${env.GIT_COMMIT}"
             sh "git commit -am 'Publish new version' && git push || echo 'no changes'"
